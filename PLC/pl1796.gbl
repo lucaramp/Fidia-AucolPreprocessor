@@ -1,0 +1,500 @@
+;       ALL LOGICS
+;       ------------
+;#define VID_FLOW_MT 1           ;Videata flussimetri refrigerante per bassa ed alta pressione
+;#define VID_FLAPS 12            ;Videate Flaps ( configurazioni numero di flaps 6,8,11,12 )
+#define VID_SPDPOWER 1          ;Videate potenza e coppia mandrino
+;#define VID_GRX_HP 1           ;Videata pressostati analogici per alta pressione su grindaix
+
+;#define TANDEM_X 1             ;Axes installation procedure
+;#define TANDEM_Y 1             ;Axes installation procedure
+;#define TANDEM_Z 1             ;Axes installation procedure
+
+;       BASE MACHINE
+;       ------------
+
+
+#define   XYZ_MOT  1           ;X e Y e Z axis counting on motor and external transducer enabled 
+
+;#define HPWINST     1              ;HPW01  wireless panel present on machine
+;#define HPWINST     2              ;HPW410 HUBITRON wireless panel present on machine
+
+;#define COMP_3AXES       1      ;Compensation enabled ON 3 axes machine
+#define COMP_5AXES       1      ;Compensation enabled ON 5 axes machine
+
+;#define  IEC11_INTERF  1       ;logiche IEC11 (sl10-dg-179 e sl10_181)presenti 
+;#define  IEC11_INTERF  2        ;logiche IEC11 (sl10-dg-179 e sl10_181) non presenti
+#define  IEC11_INTERF  3       ;logica IEC11 (sl10-dg-179 M5D per aggancio e sgancio )
+
+;#define  NOHYDUNIT       1     ;=1 Hydraulic unit not present
+#define LOOKAHEAD 3              ;M155/159 Aucol functions just call G345/G349 Cnc functions code
+;#define LOOKAHEAD 1             ;M155/159 Aucol functions just call G305/G309 Cnc functions code
+
+;#define STORE_REST  1          ;M293 e M294 enabled for Messier Dowty
+
+#define MT_TIMERS  1           ;logic for m.t. printer con custom.vid enable 
+;#define MT_TIMERS 2             ;logic for m.t. printer con custom.vid disable
+
+#define ACC_EXT 1              ;EXTERNAL acceleration application present (delorenzo)
+;#define ACC_EXT 2               ;EXTERNAL acceleration application NOT present
+
+;       SPINDLE CHANGE RANGE
+;       --------------------
+
+#define CG_RANGE  1             ;1 gamma mandrino alta)
+;#define CG_RANGE  2            ;2 gamme mandrino (alta e bassa)
+
+;#define    OMATIVE    1    ;=1 OMATIVE SISTEM PRESENT 
+
+;       TOOL CHANGE LOGIC
+;       -----------------
+
+;#define RTCP_TABLE 1            ;RTCP TABLE INSTALLED
+
+;#define ADD_AXES        4      ;Only ONE additional axis p.e. rotary table
+#define ADD_AXES        5       ;TWO additional axes p.e. rotary head M5A_55-24, Roto-tilting table
+;#define ADD_AXES        6       ;TWO additional axes p.e. rotary head M5A_55-24, Roto-tilting table + additional axis p.e. rotary table
+
+#define XY_INTERP   1           ;X e Y axis positioning in safety area interpolated
+;#define XY_INTERP   2          ;Y e X axis positioning in safety area separated block for MESSIER DOWTY
+
+;#define XOY_BOOSTEC   2         ;Y e X axis positioning not interpolated in atc for BOOSTEC
+
+;        HEAD and ROTARY TABLE LOGIC
+;       ----------------------------
+
+;#define        ROT_TABLE_POS   4       ;rotary table position 4ø asse
+;#define        ROT_TABLE_POS   5       ;rotary table position 5ø asse
+;#define        ROT_TABLE_POS   6       ;rotary table position 6ø asse
+;#define        ROT_TABLE_POS   7       ;rotary table position 7ø asse
+
+;#define        ROT_TABLE_NAME 1        ;rotary table name = AM
+;#define        ROT_TABLE_NAME 2        ;rotary table name = UM
+
+#define         ROT_HEAD_NAME   1       ;rotary head name = AM
+;#define         ROT_HEAD_NAME   2      ;rotary head name = BM
+
+
+;       TOOL MEASURE LOGIC
+;       ------------------
+
+;#define MEAS_INHIBIT   1       ;enable inhibitted measure for special tool - BOOSTEC request
+
+#define MEAS_BOOSTEC   1        ;measure not for boostec machine (default)
+;#define MEAS_BOOSTEC   2       ;measure for boostec machine
+
+;#define EXTTOOLTABLE    1       ;external tool table installed
+#define EXTTOOLTABLE    2       ;external tool table NOT installed (default)
+
+;       CHIP CONVEYOR LOGIC
+;       -------------------
+
+;#define CHIP_CONV  1           ;chip conveyor logic present for second spindle management SL-112
+
+
+;       VARIUS
+;       ------
+
+#define        NO_WPM  1       ;WPM 50/8 non presente - SL-DG-148 aucol logic non presente
+
+;#define        VIRT_AXIS_POS   4       ;virtual axis position 6ø asse
+;#define        VIRT_AXIS_POS   5       ;virtual axis position 6ø asse
+#define        VIRT_AXIS_POS   6       ;virtual axis position 6ø asse
+;#define        VIRT_AXIS_POS   7       ;virtual axis position 7ø asse
+;#define        VIRT_AXIS_POS   8       ;virtual axis position 8ø asse
+
+#define   HEAD_MOT_P  1       ;pitch axis (es. AM ) counting on motor and external transducer enabled 
+#define   HEAD_MOT_R  1       ;roll axis (es. CM ) counting on motor and external transducer enabled 
+
+;#define   GE_LOGIC  1          ;logic GE enabled
+#define   GE_LOGIC  2          ;logic disabled ( DEFAULT)
+
+
+;       BT1785/27 MACHINE
+;       -----------------
+
+#define    BT_MACHINE   2      ;=2 logic not for BT machine 
+;#define    BT_MACHINE   1      ;=1 logic for BT machine 
+
+
+;        AUTOMATIC PALLET CHANGER MP630
+;        ---------------------------------
+
+#define    PALLET_MP630   2    ;=2 logic not installed 
+;#define    PALLET_MP630    1    ;=1 logic installed 
+
+#define    LOSMA_KNOL  1   ;=1 LOSMA SYSTEM INSTALLED (default)
+;#define    LOSMA_KNOL  2  ;=2 KNOL SYSTEM INSTALLED 
+
+#define  DINAMIC_DRAW  1    ;New dinamic range for spindle draw_bar enabled 
+
+;#define PCXDUBLE_GTF 1      ;duble console MASTER e SLAVE for GTF machine
+
+;	PIECE LOCKING SYSYTEM WITH VACUUM PUMP
+;	--------------------------------------
+
+;#define  PITCHONTABLE 	 1	;LOCKING SYSYTEM WITH VACUUM PUMP PRESENT ON ROTARY TABLE  					     	 
+                                ;- PITCH AXIS 
+
+;        TOOL PRESET CYCLE
+;        -----------------
+;#define  M858_PRESET 	 1	;M858 tool preset cicle   					     	 
+
+;        AERNOVA ASPIRATOR for G996_60 
+;        -----------------------------
+#define  AER_G996_60       2       ;=2 default - NO AERDUST ASPIRATOR MANAGEMENT (G996_60) 					     	 
+;#define  AER_G996_60       1      ;=1  AERDUST  ASPIRATOR MANAGEMENT (G996_60)
+
+;       AUTOMATIC ROOF MOTORIZED AS AUXILIARY AXIS
+;        ------------------------------------------ 
+;#define   ROOF_MOTOR    1 
+
+;       GLOBAL MEMORY BITS
+;       ------------------
+
+        .GMBIT  M1RBLX
+        .GMBIT  M1Y2GRBLX
+        .GMBIT  M1RBLY
+        .GMBIT  M1RBLZ
+        .GMBIT  M3RBLX
+        .GMBIT  M3RBLY
+        .GMBIT  M3RBLZ
+        .GMBIT  M4RBLX
+        .GMBIT  M4RBLY
+        .GMBIT  M4RBLZ
+        .GMBIT  M1RBLA  ;Attenzione gestione negata ->BSET per bloccare
+        .GMBIT  M1RBLB  ;Attenzione gestione negata ->BSET per bloccare
+        .GMBIT  M10RBLA  ;Attenzione gestione negata ->BSET per bloccare
+        .GMBIT  M10RBLB  ;Attenzione gestione negata ->BSET per bloccare
+
+        .GMBIT  M4RBLA
+        .GMBIT  M4RBLB
+        .GMBIT  M4RBLC
+        .GMBIT  M4RBLP
+        .GMBIT  M4RBLQ
+        .GMBIT  M5RBLX
+        .GMBIT  M5RBLY
+        .GMBIT  M5RBLZ
+        .GMBIT  M5RBLA
+        .GMBIT  M5RBLB
+        .GMBIT  M5RBLC
+        .GMBIT  MSHBL
+        .GMBIT  MSHSBL
+        .GMBIT  MSHPRQ
+        .GMBIT  MSHVRQ
+        .GMBIT  MSHNRQ
+        .GMBIT  MWTOPN
+        .GMBIT  MDAXMV
+        .GMBIT  MDM06
+        .GMBIT  MDM16
+        .GMBIT  MDPOA2
+        .GMBIT  MDPOA2_A1
+        .GMBIT  MDPOA2_A2
+        .GMBIT  MDHALFBAR
+        .GMBIT  MDADDBAR
+        .GMBIT  MLIFOK
+        .GMBIT  MDLIFE
+        .GMBIT  M27DONE
+        .GMBIT  MDM57
+        .GMBIT  MDHYPE
+        .GMBIT  MDM57_RQ
+        .GMBIT  MDM57_RQ1
+        .GMBIT  MDM27_RQ
+        .GMBIT  MDM27_RQ1
+        .GMBIT  MDM57_EX
+        .GMBIT  MDM27_EX
+        .GMBIT  MDM06_RQ
+        .GMBIT  MDM06_RQ1
+        .GMBIT  MDM06_EX
+        .GMBIT  MDM06_M27
+        .GMBIT  MD_M27
+        .GMBIT  MD_M57
+        .GMBIT  MD_M176
+        .GMBIT  MD_M180
+        .GMBIT  MD_M177
+        .GMBIT  MD_M427
+        .GMBIT  MD_M457
+        .GMBIT  MD_M480
+        .GMBIT  MD_M477
+        .GMBIT  MD_M250
+        .GMBIT  MD_M254
+        .GMBIT  MD_M265
+        .GMBIT  MD_MP9ON
+        .GMBIT  MD1_MP9ON
+        .GMBIT  M_ZER_DONE
+        .GMBIT  MDTLCK
+        .GMBIT  MDTLUK
+        .GMBIT  MDTLIN
+        .GMBIT  MDNTOL
+        .GMBIT  MP_EMERG
+        .GMBIT  MR_EMERG
+        .GMBIT  MDM205
+        .GMBIT  MDBRH_ON
+        .GMBIT  MBRHPPITRQ
+        .GMBIT  MBRHPROLRQ
+        .GMBIT  MBRHPIDXRQ
+        .GMBIT  MBRHLIDXRQ
+        .GMBIT  MBRHLOCKRQ
+        .GMBIT  MBRHBERRQ
+        .GMBIT  MDHCO_RQ
+        .GMBIT  MDHCOMANRQ
+        .GMBIT  M_DISPD1
+        .GMBIT  MDSLA1
+        .GMBIT  MDSLA2
+        .GMBIT  MDSLA3
+        .GMBIT  MDSLA4
+        .GMBIT  MDSLA5
+        .GMBIT  MDSLA6
+        .GMBIT  MDSLA7
+        .GMBIT  MDSLA8
+        .GMBIT  MDSLA9
+        .GMBIT  MDSLA10
+        .GMBIT  MDCIR2
+        .GMBIT  MDPSA1
+        .GMBIT  MDPSA2
+        .GMBIT  MDPSA3
+        .GMBIT  MDPSA4
+        .GMBIT  MDPSA5
+        .GMBIT  MDPSA6
+        .GMBIT  MDPSA7
+        .GMBIT  MDPSA8
+        .GMBIT  MDPSA9
+        .GMBIT  MDPSA10
+        .GMBIT  MDLK_INITB
+        .GMBIT  MDPFC1
+        .GMBIT  MDPFC8
+        .GMBIT  M_DISPRE
+        .GMBIT  MD24OM
+        .GMBIT  MDSIATON
+        .GMBIT  MDSIATOF
+        .GMBIT  MD2SIATON
+        .GMBIT  MD2SIATOF
+        .GMBIT  MDHYTC
+        .GMBIT  MDHYPE_R
+        .GMBIT  MDHYPE_P
+        .GMBIT  MDHYPE_T
+        .GMBIT  MD_ZERO
+        .GMBIT  M1_ZERO
+        .GMBIT  M1_CICLO
+        .GMBIT  M2_CICLO
+        .GMBIT  M2_ZERO
+        .GMBIT  M12PROG_P
+        .GMBIT  M11PROG_P
+        .GMBIT  M12PROG_R
+        .GMBIT  M11PROG_R
+        .GMBIT  M12PROG
+        .GMBIT  M11PROG
+        .GMBIT  MBL_RD_OP
+        .GMBIT  MBL1_IDPSA
+        .GMBIT  M_STOP_SIM
+        .GMBIT  M_STAR_SIM
+        .GMBIT  M12_RTR_RQ
+        .GMBIT  M11_RTR_RQ
+        .GMBIT  M10_RTR_RQ
+        .GMBIT  MPRI_RTR1
+        .GMBIT  MD_ZER_ROT
+        .GMBIT  MDLROT1
+        .GMBIT  MCM11_AUCO
+        .GMBIT  MCM12_AUCO
+        .GMBIT  MCM10_AUCO
+        .GMBIT  M_CLOCK_ON
+        .GMBIT  MD_FRMIS
+        .GMBIT  MD_FRTC
+        .GMBIT  MDHFTC
+        .GMBIT  MDHFTC2
+        .GMBIT  MDHFSPD
+        .GMBIT  MDTLIN_CU
+        .GMBIT  MDNTOL_CU
+        .GMBIT  MDTLCK_CU
+        .GMBIT  M_STM6_SIM
+        .GMBIT  MB_MCLEA
+        .GMBIT  MB_MPOS
+        .GMBIT  MDSPD2_SEL
+        .GMBIT  MISPRE
+        .GMBIT  MLCK
+        .GMBIT  MISLDC
+        .GMBIT  MDPSA
+        .GMBIT  MDM150
+        .GMBIT  MRQOPD
+        .GMBIT  MRQCPD
+        .GMBIT  MUAC02
+        .GMBIT  MB_MDTAM
+        .GMBIT  MATCBUSY
+        .GMBIT  MDSAA
+        .GMBIT  MDSAB
+        .GMBIT  MDINM
+        .GMBIT  MDOUM
+        .GMBIT  MD_M57RQSP
+        .GMBIT  MD_M27RQSP
+        .GMBIT  MDJOGDIS
+        .GMBIT  MCKCOMEM
+        .GMBIT  MDLKDOORRF
+        .GMBIT  M27_OK
+        .GMBIT  M57_OK
+        .GMBIT  MDPUP
+        .GMBIT  M12PROFOK
+        .GMBIT  MD_ROOF
+        .GMBIT  MD_ROOF1
+        .GMBIT  MD_ROOF2
+        .GMBIT  M12FFBSOK
+        .GMBIT  MDWTPSA1
+        .GMBIT  MDWTPSA2
+        .GMBIT  MDWTPSA3
+        .GMBIT  MDWTPSA4
+        .GMBIT  MDWTPSA5
+        .GMBIT  MDWTPSA6
+        .GMBIT  MDWTPSA7
+        .GMBIT  MDWTPSA8
+        .GMBIT  MDWTPSA9
+        .GMBIT  MDWTPSA10
+        .GMBIT  MD_M266ON
+        .GMBIT  MDDUEVEA
+        .GMBIT  MDDUEVDA
+        .GMBIT  MDASLOON
+        .GMBIT  MODO2
+        .GMBIT  MODO3
+        .GMBIT  MODO4
+        .GMBIT  MDUTLP
+        .GMBIT  MDWATERON
+        .GMBIT  MDPOA1
+        .GMBIT  MDPOAH
+
+        .GMBIT  MBRHBLP
+        .GMBIT  MBRHSBLP
+        .GMBIT  MBRHBLR
+        .GMBIT  MBRHSBLR
+        .GMBIT  MDAWA1
+        .GMBIT  MDAWA2
+        .GMBIT  MDBD1O
+        .GMBIT  MDBD2O
+        .GMBIT  MISL2C
+        .GMBIT  MPIIDXBX
+        .GMBIT  MPIRDXBX
+        .GMBIT  MDM415EX
+        .GMBIT  MPISRIDX
+        .GMBIT  MPISIIDX
+
+        .GMBIT  MDM13
+        .GMBIT  MDM14
+
+        .GMBIT  MDVREF_RQ
+        .GMBIT  MDVREFEXE
+        .GMBIT  MDTOOLEMER
+        .GMBIT  MDTLCKL
+        .GMBIT  MDTLUKL
+        .GMBIT  MDTLINL
+        .GMBIT  MDNTOLL
+        .GMBIT  MDNODINAMI
+        .GMBIT  MDM10_RQ
+        .GMBIT  MDM10_EX
+
+        .GMBIT  MDEVS
+        .GMBIT  MDACCLUBON
+        .GMBIT  MDEVCC
+        .GMBIT  MDUDCIR
+        .GMBIT  MDHPEN
+        .GMBIT  MBLTOOLLUB
+
+        .GMBIT  MDBOCM180 
+        .GMBIT  MDBOCM57 
+        .GMBIT  MDBOCM27 
+        .GMBIT  MDBOCM177
+        .GMBIT  MELM2HLD
+
+        .GMBIT  MDRQNOLUB
+        .GMBIT  MDRQPRINT
+        .GMBIT  MDLUBDISAB
+        .GMBIT  MDWATERDIS
+        .GMBIT  MDWATERENA
+
+        .GMBIT  MDREFDISAB
+        .GMBIT  MDLUBENAB
+        .GMBIT  MDREFENAB
+        .GMBIT  MDTCMISENA
+        .GMBIT  MDFROMPROB
+        .GMBIT  MSTOPLUBRQ
+        .GMBIT  MDFRMPITCH
+        .GMBIT  TMS_IDHLD
+        .GMBIT  MHEAPUMPRQ
+        .GMBIT  MHPWIDPASP          
+        .GMBIT  MHPWIDPASN
+        .GMBIT  MHPWIDPSA
+        .GMBIT  MDHPWON       
+        .GMBIT  MDHPWENA       
+        .GMBIT  TYP_T0_101
+        .GMBIT  IECMSAUC1
+        .GMBIT  IECMSAUC2
+        .GMBIT  IECMSAUC3
+        .GMBIT  IECMSAUC4
+        .GMBIT  IECMSAUC5
+        .GMBIT  IECMSAUC6
+        .GMBIT  IECMSAUC7
+        .GMBIT  IECMSAUC8
+        .GMBIT  IECMSAUC9
+        .GMBIT  IECMSAUC10
+
+;****special atc *******
+
+        .GMBIT  MDIDIRMON
+
+        .GMBIT  MDROOFOPXN        ;=1 GLOBAL MEMORY ROOF OPENED - FROM AUCOL1
+        .GMBIT  MDATCOUTXN        ;=1 GLOBAL MEMORY ATC OUT - FROM AUCOL3
+        .GMBIT  MDATCOUTXP        ;=1 GLOBAL MEMORY ATC OUT in X+ - FROM AUCOL3
+
+
+        .GMBIT  M1ZERDONE
+        .GMBIT  M2ZERDONE
+        .GMBIT  MDSKIPCOLL
+
+        .GMBIT  MDM414
+        .GMBIT  MDM414EX
+;***** USED BY GE_LOGIC = 1 **
+        .GMBIT  MDM310
+        .GMBIT  MDM312
+        .GMBIT  MDM320
+        .GMBIT  MK103
+;*****************************
+        .GMBIT  MDPUCE          ;HEAD PUSHBUTTON OPEN/CLOSE REQUEST
+        .GMBIT  MDRDCHIPRQ      ;CIclo DI SCANSIONE MAGAZZINO #1 PER lettura Balluff Chip
+        .GMBIT  M2RDCHIPRQ      ;CIclo DI SCANSIONE MAGAZZINO #2 PER lettura Balluff Chip 
+        .GMBIT  MAIRBL          ;Door locking logic for Air cleaning head system
+        .GMBIT  GMBITMIAG       ;MILLING AGGREGATES HEAD MOUNTED
+        .GMBIT  MIDHLD1
+        .GMBIT  MIDHLD2
+        .GMBIT  MIDHLD3
+        .GMBIT  MIDHLD4
+        .GMBIT  MIDHLD5
+        .GMBIT  MIDHLD6
+        .GMBIT  MIDHLD7
+        .GMBIT  MIDHLD8
+        .GMBIT  MIDHLD9
+        .GMBIT  MIDHLD10
+;**********************************
+        .GMBIT  MDLASERENA      ;cutting laser DEVICE  enabled
+        .GMBIT  MDLASERINS
+        .GMBIT  MDLASERREM
+
+        .GMBIT  MSTOAIRL
+        .GMBIT  MSTOAIRH
+        .GMBIT  MSTOAIR
+
+        .GMBIT  MD_M306
+        .GMBIT  MDMOD3HP1L      ;;from sl-82 (MODE3 selected and IDHP1L released)
+
+;**********************************
+        .GMBIT  2SPD_RET
+        .GMBIT  MD2SSA
+        .GMBIT  MD_UDSMO2
+;**********************************
+        .GMBIT  M9RBLA
+        .GMBIT  MDTTURN
+        .GMBIT  RQ_HIRTHYD      ;Request hydraulic by spindle hirt
+        .GMBIT  RQ_HIRTULK
+        .GMBIT  RQ_HIRTLCK
+        .GMBIT  RQ_MILL
+        .GMBIT  RQ_TURN
+        .GMBIT  RQ_SP1POS
+        .GMBIT  MDSP1POSER
+        .GMBIT  RQHLDGRZUP
+        .GMBIT  RQHLDGRZDP
+
+        .GMBIT  MDAXSFSM

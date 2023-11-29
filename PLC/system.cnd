@@ -1,0 +1,49 @@
+/********************************************
+** SYSTEM.CND - CONDITION FILE FOR FIDIA CNC
+** Sysgen version 5.1.1 - 12 set 2013
+** CNC SOFTWARE VERSION V5R4.b.2614
+** SYSTEM: pcd1796
+********************************************/
+
+	#define CND_ID24A		1	/* CM10/018 24V Automatic mode operating */
+	#define DISPLAYSP		1	/* CM10/026 Display of spindle power in main screen */
+	#define ROTO_PALLET	1	/* ES10/AP option for alignment */
+	#define ACTIVE_TUNING	1	/* ES10/AT option */
+	#define LIMITI		1	/* ES10/LL option */
+	#define GX		1	/* GA10/NX X axis is single transducer gantry */
+	#define MQR		1	/* MQR10/C3 measuring option */
+	#define PSMC1		1	/* PSMC/01 panel */
+	#define TOOL_LIFE	1	/* TM10/LM option for tool life management */
+	#define BLUM		2	/* TM10/MDL option for tool measuring */
+	#define CPU8		1	/* CPU8 */
+	#define NRA		6 	/* Axis number */
+	#define NRG		6 	/* Gantry axis number */
+	#define HANDWHEEL	4	/* Handwheels number */
+	#define SPINDLE		1	/* Spindle number */
+	#define AXSPD		2	/* ES10/AS1x number of spindle indexed axes */
+	#define AXPLC		4 	/* GP10/xxx Auxiliary axis number */
+	#define AXVIS		3 	/* DA10/x Displayed axis number */
+	#define FDD_DRIVE	1	/* Fidia digital drive */
+	#define RTCP		1	/* RTCP option */
+	#define VIRCAN		1	/* virtual axis */
+	#define TAPPING		1	/* controlled spindle option */
+	#define TERMIC		1	/* IA10/CT Termic compensation number */
+	#define ADAPTIVE	1	/* IA10/AC option for adaptive control */
+	#define CNTGP		3	/* general purpose digital counting channels */
+	#define HPX03		1	/* HPX10-03 */
+	#define PBC1		1	/* pushbutton panel */
+	#define PJ10		1	/* PJ10/02 portable pushbutton panel */
+	#define MEMVIS		3	/* ES10/AVx number of displayed areas */
+	#define ROTO5		1	/* ROTO5 option */
+	#define RTCINV		1	/* RTCINV option */
+	#define DGT		6	/* digitizing option */
+	#define X_TANDEM	5 	/* tandem axis number */
+	#define PLCINT		1	/* Aucol process in interrupt */
+	#define PSC1		1	/* PSC1/01 panel */
+	#define HMS		2	/* ES10-HMS option */
+	#define N_AUCOL		10	/* Aucol number */
+	#define N_PROC		100   	/* Process number */
+	#define SP1_TANDEM		1	/* Spindle Tandem Option on first Spindle */
+	#define EXT_SCREW	2   	/*  VAC HIGH RESOLUTION */
+
+  #define CACCA_1
