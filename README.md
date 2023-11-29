@@ -4,7 +4,7 @@
 (ES.: f:\Git )  
 
 * Clonare il progetto:    
-***git clone http://uti-git:3000/Luca_Ramponi/AucolPreprocessor.git***  
+***git clone https://github.com/lucaramp/Fidia-AucolPreprocessor.git***  
 verrà creata la cartella g:\Git\AucolPreprocessor che contiene i sorgenti ed il file dei requirements.txt
 
 * Creazione del Virtuale Environment:  
